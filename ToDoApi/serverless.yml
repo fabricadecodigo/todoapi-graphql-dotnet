@@ -1,0 +1,23 @@
+service: todo-services-api
+
+provider:
+  name: aws
+  endpointType: EDGE
+  runtime: dotnetcore3.1
+  stage: dev
+  region: us-east-1
+  environment:
+    ASPNETCORE_ENVIRONMENT: ${opt:stage, self:provider.stage}  
+
+package:
+  artifact: bin/serverless/deploy-package.zip
+
+functions:
+  handler:
+    handler: ToDoApi::ToDoApi.LambdaEntryPoint::FunctionHandlerAsync
+    events:
+      - http:
+          path: /{proxy+}
+          method: any
+          cors: true          
+        

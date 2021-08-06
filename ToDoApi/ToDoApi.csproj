@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="6.0.3" />
     <PackageReference Include="FluentValidation" Version="10.3.0" />
     <PackageReference Include="HotChocolate.AspNetCore" Version="11.3.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.8" />
