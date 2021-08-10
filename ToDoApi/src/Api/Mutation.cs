@@ -1,7 +1,7 @@
 using HotChocolate;
-using ToDoApi.src.BusinessRules.Handlers;
-using ToDoApi.src.BusinessRules.Requests;
 using ToDoApi.src.BusinessRules.Response;
+using ToDoApi.src.BusinessRules.Requests;
+using ToDoApi.src.BusinessRules.Handlers;
 
 namespace ToDoApi.src.Api
 {
